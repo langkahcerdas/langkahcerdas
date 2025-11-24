@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Web Kosmik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Aturan Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: #ffffff;
+            background-color: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Latar Belakang Kosmik */
+        .cosmic-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Menggunakan gradien radial sederhana untuk efek 'cahaya' gelap */
+            background: radial-gradient(circle at center top, rgba(17, 34, 51, 0.4) 0%, rgba(0, 0, 0, 1) 70%); 
+            filter: brightness(0.7) contrast(1.2);
+        }
+
+        /* Header (Navigasi Atas) */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo-left .logo-icon {
+            font-size: 24px;
+            transform: rotate(180deg);
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin: 0 15px;
+        }
+
+        .navbar .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            opacity: 1;
+        }
+
+        .menu-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .menu-right .menu-icon {
+            font-size: 20px;
+        }
+
+        /* Kotak Logo Kanan */
+        .menu-right .logo-right {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ffffff;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            position: relative;
+            right: -20px;
+        }
+
+        /* Konten Utama (Quote) */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            z-index: 5;
+        }
+
+        .quote-container h1 {
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1.4;
+            max-width: 800px;
+            color: #f0f0f0;
+        }
+
+        .quote-container .author {
+            font-size: 18px;
+            margin-top: 15px;
+            font-weight: 200;
+            opacity: 0.8;
+        }
+
+        /* Footer (Deskripsi dan Scroll Down) */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 20px 40px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .description-box {
+            max-width: 350px;
+            font-size: 12px;
+            line-height: 1.6;
+            opacity: 0.6;
+            padding-bottom: 10px;
+        }
+
+        .description-box p strong {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .scroll-down {
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+            opacity: 0.5;
+            padding-bottom: 10px;
+        }
+
+        .scroll-down i {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-5px);
+            }
+            60% {
+                transform: translateY(-3px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-left">
+            <i class="fas fa-play logo-icon"></i>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#pendahuluan">PENDAHULUAN</a></li>
+                <li><a href="#teknologi">TEKNOLOGI</a></li>
+                <li><a href="#game">GAME</a></li>
+                <li><a href="#tentang">TENTANG</a></li>
+            </ul>
+        </nav>
+        <div class="menu-right">
+            <i class="fas fa-bars menu-icon"></i>
+            <div class="logo-right">
+                </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="quote-container">
+            <h1>SELAMAT DATANG</h1>
+            <p class="author">- LANGKAH CERDAS</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="description-box">
+            <p>
+                Selamat datang di dunia seru penuh tantangan! 🎮🔥
+		Kami menghadirkan berbagai game seru yang siap dimainkan kapan saja melalui smartphone kamu. Jelajahi game dengan grafis keren, karakter unik, serta mode permainan yang bikin kamu ketagihan!
+            </p>
+        </div>
+        
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+            <p>SCROLL DOWN</p>
+        </div>
+    </footer>
+    
+    <div class="cosmic-background"></div>
+
+</body>
+</html>
